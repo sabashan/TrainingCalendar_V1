@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table,td,th {
+	border: 1px black
+}
+
+th {
+	background-color: gray;
+	color: white;
+}
+
+table {
+	width: 80%;
+}
+</style>
+<title>TC Service</title>
+</head>
+
+<body>
+<h1 align="center">Training Calendar</h1>
+JAX-RS service is running....
+	<h2>User services with description</h2>
+
+	<table>
+		<tr>
+			<th>Methods</th>
+			<th>Service url</th>	
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td>GET</td>
+			<td><a href="#">
+					http://localhost:8080/TrainingCalendar/rest/tc/user</td>
+			<td>Display all the users</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/user/searche/{email}</td>
+			<td>Search user with email</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/user/auth/{email},{password}</td>
+			<td>User login with authentication</td>
+		</tr>
+
+		<tr>
+			<td>POST</td>
+			<td><a href="#">
+					http://localhost:8080/TrainingCalendar/rest/tc/user</td>
+			<td>Add new user</td>
+		</tr>
+
+		<tr>
+			<td>PUT</td>
+			<td><a href="#">
+					http://localhost:8080/TrainingCalendar/rest/tc/user</td>
+			<td>Update existing users</td>
+		</tr>
+
+		<tr>
+			<td>DELETE</td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/user/{email}</td>
+			<td>Delete a user with email</td>
+		</tr>
+
+	</table>
+	<br>
+	<hr>
+
+	<h2>Event services with description</h2>
+	<table>
+		<tr>
+			<th>Methods</th>
+			<th>Service url</th>
+			<th>Description</th>
+		</tr>
+
+		<tr>
+			<td>GET</td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/event</td>
+			<td>Display all the events</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/event/searchd/{date}</td>
+			<td>Return all the events in particular date</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/event/searchg/{group}</td>
+			<td>Return all the events in particular group</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td><a href="#">
+					http://localhost:8080/TrainingCalendar/rest/tc/event/searcht/{topic}</td>
+			<td>Return all the events in particular topic</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/event/searchl/{location}</td>
+			<td>Return all the events in particular location</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/event/searche/{email}</td>
+			<td>Return event for particular email</td>
+		</tr>
+
+		<tr>
+			<td>POST</td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/event</td>
+			<td>Add new event</td>
+		</tr>
+
+		<tr>
+			<td>PUT</td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/event</td>
+			<td>Update the existing event</td>
+		</tr>
+
+		<tr>
+			<td>DELETE</td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/event/{eventId}</td>
+			<td>Delete the event with eventId</td>
+		</tr>
+
+	</table>
+
+	<br>
+	<hr>
+	<h2>Topic services with description</h2>
+	<table>
+		<tr>
+			<th>Methods</th>
+			<th>Service url</th>
+			<th>Description</th>
+		</tr>
+
+		<tr>
+			<td>GET</td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/topic</td>
+			<td>Display all topics</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/topic/searchd/{topicId}</td>
+			<td>Return all the details in particular topicId</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/topic/searchg/{topic}</td>
+			<td>Return all the details in particular topic</td>
+		</tr>
+		<tr>
+			<td>POST</td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/topic
+			</td>
+			<td>Add new topic details</td>
+		</tr>
+
+
+		<tr>
+			<td>PUT</td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/topic</td>
+			<td>Update the existing topic details</td>
+		</tr>
+
+		<tr>
+			<td>DELETE</td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/topic/{topicId}</td>
+			<td>Delete the topic with topicId</td>
+		</tr>
+
+	</table>
+	<br>
+	<hr>
+
+	<h2>Location services with description</h2>
+	<table>
+		<tr>
+			<th>Methods</th>
+			<th>Service url</th>
+			<th>Description</th>
+		</tr>
+
+		<tr>
+			<td>GET</td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/location</td>
+			<td>Return all locations</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/location/searchd/{locationId}</td>
+			<td>Return all the details with locationId</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/location/searchg/{location}</td>
+			<td>Return all the details in particular location</td>
+		</tr>
+
+
+
+		<tr>
+			<td>POST</td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/location</td>
+			<td>Add new location details</td>
+		</tr>
+
+
+		<tr>
+			<td>PUT</td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/location</td>
+			<td>Update existing location details</td>
+		</tr>
+
+		<tr>
+			<td>DELETE</td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/location/{locationId}</td>
+			<td>Delete the location with locationId</td>
+		</tr>
+
+	</table>
+	<br>
+	<hr>
+
+	<h2>Groups services with description</h2>
+	<table>
+		<tr>
+			<th>Methods</th>
+			<th>Service url</th>
+			<th>Description</th>
+		</tr>
+
+		<tr>
+			<td>GET</td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/groups</td>
+			<td>Display all groups details</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td><a href="#">
+					http://localhost:8080/TrainingCalendar/rest/tc/groups/searchg/{groupId}</td>
+			<td>Return all the details with groupId</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td><a href="#">
+					http://localhost:8080/TrainingCalendar/rest/tc/groups/searchg/{group}</td>
+			<td>Return all the details in particular group</td>
+		</tr>
+
+		<tr>
+			<td>POST</td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/groups</td>
+			<td>Add new groups details</td>
+		</tr>
+
+
+		<tr>
+			<td>PUT</td>
+			<td><a href="#">
+					http://localhost:8080/TrainingCalendar/rest/tc/groups</td>
+			<td>Update the existing group details</td>
+		</tr>
+
+		<tr>
+			<td>DELETE</td>
+			<td><a href="#">http://localhost:8080/TrainingCalendar/rest/tc/groups/{groupId}</td>
+			<td>Delete the group with groupId</td>
+		</tr>
+
+	</table>
+	<br>
+	<br>
+</body>
+
+
+</html>
