@@ -16,6 +16,7 @@
 * under the License.
 */
 
+
 package org.training.controller.location;
 
 import java.io.IOException;
